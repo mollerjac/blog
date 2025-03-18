@@ -1,42 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Blog</title>
-    <style>
-        .post {
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-        .post-date {
-            font-size: 0.9em;
-            color: #999;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('post/forsteskoledag.html')
-                .then(response => response.text())
-                .then(data => {
-                    const postContainer = document.createElement('div');
-                    postContainer.innerHTML = data;
-                    document.getElementById('posts').appendChild(postContainer);
-                });
+    <meta name="description" content="Velkommen til min personlige blog, hvor jeg deler mine tanker og erfaringer.">
+    <meta property="og:title" content="Min Blog">
+    <meta property="og:description" content="Velkommen til min personlige blog, hvor jeg deler mine tanker og erfaringer.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
 
-            fetch('fraprojektledertilit.html')
-                .then(response => response.text())
-                .then(data => {
-                    const postContainer = document.createElement('div');
-                    postContainer.innerHTML = data;
-                    document.getElementById('posts').appendChild(postContainer);
-                });
-        });
-    </script>
+<script src="/path/to/redirect.js"></script>
+
 </head>
 <body>
-    <h1>Velkommen til min blog</h1>
-    <div id="posts"></div>
+    <header>
+        <h1>Velkommen til min blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="om-mig.html">Om mig</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+<article>
+            <h2>Velkommen bla bla bla</h2>
+            <p>Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ud troværdige ud.</p>
+        </article>
+        
+        <article>
+            <p><h2>Herunder kan du læse alle mine blog indlæg</h2></p>
+        </article>
+        
+        <article>
+            <div id="fraprojektledertilit"></div>
+        </article>
+
+        <article>
+            <div id="forsteskoledag"></div>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 Min Blog</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
