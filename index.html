@@ -10,8 +10,43 @@
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
     <script src="/path/to/redirect.js"></script>
-   
+    <style>
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .post {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .post-date {
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('post/forsteskoledag.html')
+                .then(response => response.text())
+                .then(data => {
+                    const postContainer = document.createElement('div');
+                    postContainer.innerHTML = data;
+                    document.getElementById('forsteskoledag').appendChild(postContainer);
+                });
 
+            fetch('fraprojektledertilit.html')
+                .then(response => response.text())
+                .then(data => {
+                    const postContainer = document.createElement('div');
+                    postContainer.innerHTML = data;
+                    document.getElementById('fraprojektledertilit').appendChild(postContainer);
+                });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
