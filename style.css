@@ -26,9 +26,8 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 1rem;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    
+    
 }
 
 nav ul {
