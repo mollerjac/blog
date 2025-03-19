@@ -19,6 +19,8 @@ header {
     color: var(--text-color);
     padding: 1rem;
     text-align: center;
+    width: 100%; /* Ensures header has the same width as footer */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
 }
 
 footer {
@@ -28,6 +30,7 @@ footer {
     text-align: center;
     width: 100%;
     margin-top: auto; /* Ensures footer sticks to the bottom */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
 }
 
 nav ul {
