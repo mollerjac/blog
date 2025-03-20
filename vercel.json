@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/forside", "destination": "/index.html" },
+    { "source": "/om-mig", "destination": "/om-mig.html" },
+    { "source": "/blog", "destination": "/blog.html" }
+  ]
+}
