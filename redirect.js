@@ -6,17 +6,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-[[redirects]]
-  from = "/forside"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/om-mig"
-  to = "/om-mig.html"
-  status = 200
-
-[[redirects]]
-  from = "/blog"
-  to = "/blog.html"
-  status = 200
