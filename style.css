@@ -93,6 +93,16 @@ article {
     flex: 1; /* Ensures main content takes available space */
 }
 
+/* Links */
+a {
+    text-decoration: none; /* Fjerner understregningen */
+    color: var(--primary-color); /* Ændrer farven til den primære farve */
+}
+
+a:hover {
+    color: var(--hover-color); /* Ændrer farven ved hover */
+}
+
 /* Tablets (iPads) */
 @media (max-width: 768px) {
     .container {
@@ -132,14 +142,4 @@ article {
     h2 {
         font-size: 1.2em;
     }
-}
-
-/* Tilføj dette til din eksisterende style.css */
-a {
-    text-decoration: none; /* Fjerner understregningen */
-    color: var(--text-color); /* Ændrer farven til den definerede tekstfarve */
-}
-
-a:hover {
-    color: var(--hover-color); /* Ændrer farven ved hover */
 }
