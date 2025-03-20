@@ -133,3 +133,13 @@ article {
         font-size: 1.2em;
     }
 }
+
+/* Tilføj dette til din eksisterende style.css */
+a {
+    text-decoration: none; /* Fjerner understregningen */
+    color: var(--text-color); /* Ændrer farven til den definerede tekstfarve */
+}
+
+a:hover {
+    color: var(--hover-color); /* Ændrer farven ved hover */
+}
