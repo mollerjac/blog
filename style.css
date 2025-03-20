@@ -96,7 +96,7 @@ article {
 /* Links */
 a {
     text-decoration: none; /* Fjerner understregningen */
-    color: var(--primary-color); /* Ændrer farven til den primære farve */
+    color: var(--hover-color); /* Ændrer farven til den primære farve primary-color*/
 }
 
 a:hover {
