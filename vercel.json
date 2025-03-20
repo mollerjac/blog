@@ -1,7 +1,7 @@
 {
   "redirects": [
-    { "source": "/forside", "destination": "/index.html" },
-    { "source": "/om-mig", "destination": "/om-mig.html" },
-    { "source": "/blog", "destination": "/blog.html" }
+    { "source": "/forside", "destination": "/index.html", "permanent": true },
+    { "source": "/om-mig", "destination": "/om-mig.html", "permanent": true },
+    { "source": "/blog", "destination": "/blog.html", "permanent": true }
   ]
 }
