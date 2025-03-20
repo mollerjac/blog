@@ -22,12 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 main.innerHTML = ""; // Tømmer main-elementet før nyt indhold indlæses
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = data;
-                // Find det relevante indhold i tempDiv og flyt det til main
-                const newMainContent = tempDiv.querySelector("main");
-                if (newMainContent) {
-                    main.innerHTML = newMainContent.innerHTML;
+                const newContent = tempDiv.querySelector("main");
+                if (newContent) {
+                    main.innerHTML = newContent.innerHTML;
                 } else {
-                    main.innerHTML = data; // Hvis der ikke er et main-element, indlæses hele dataen
+                    main.innerHTML = data;
                 }
             })
             .catch(error => console.error("Error fetching page:", error));
