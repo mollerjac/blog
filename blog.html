@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Min Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    <title>Blog</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="container">
@@ -20,20 +19,31 @@
             </nav>
         </header>
         <main>
-            <article class="post">
-                <h2><a href="/post/fraprojektledertilit">Fra projektleder til IT</a></h2>
-                <p>Min rejse fra projektleder til IT specialist har været spændende og udfordrende...</p>
+            <article>
+                <h2><a href="post/forsteskoledag.html">Første skoledag</a></h2>
+                <p class="post-date"></p>
             </article>
-
-            <article class="post">
-                <h2><a href="/post/forsteskoledag">Første skoledag</a></h2>
-                <p>Min første skoledag som IT-studerende var en oplevelse fyldt med nye indtryk...</p>
-            </article>
+            <!-- Flere indlæg -->
         </main>
         <footer>
             <p>&copy; 2025 Min Blog</p>
         </footer>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const postLinks = document.querySelectorAll("main article h2 a");
+            postLinks.forEach(link => {
+                fetch(link.href)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(data, "text/html");
+                        const postDate = doc.querySelector("time").getAttribute("datetime");
+                        link.parentElement.nextElementSibling.textContent = new Date(postDate).toLocaleDateString('da-DK', { year: 'numeric', month: 'long', day: 'numeric' });
+                    })
+                    .catch(error => console.error('Error fetching post date:', error));
+            });
+        });
+    </script>
 </body>
 </html>
