@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll("a");
     links.forEach(link => {
@@ -19,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
         fetch(page)
             .then(response => response.text())
             .then(data => {
-                document.querySelector("main").innerHTML = data;
+                const main = document.querySelector("main");
+                main.innerHTML = ""; // Tømmer main-elementet før nyt indhold indlæses
+                main.innerHTML = data;
             })
             .catch(error => console.error("Error fetching page:", error));
     }
