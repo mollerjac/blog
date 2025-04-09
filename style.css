@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #333;
-    --secondary-color: #444;
-    --hover-color: #555;
-    --background-color: #f4f4f4;
-    --text-color: #fff;
+    --primary-color: #000; /* Sort */
+    --secondary-color: #222; /* Mørkere grå */
+    --hover-color: #444; /* Lysere grå */
+    --background-color: #000; /* Sort baggrund */
+    --text-color: #fff; /* Hvid tekst */
     --font-family: Arial, sans-serif;
 }
 
@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+    color: var(--text-color); /* Hvid tekst */
 }
 
 header {
@@ -60,11 +61,11 @@ main {
 }
 
 article {
-    background-color: var(--text-color);
+    background-color: var(--primary-color); /* Sort baggrund for artikler */
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Lysere skygge */
 }
 
 @media (max-width: 600px) {
@@ -96,7 +97,7 @@ article {
 /* Links */
 a {
     text-decoration: none;
-    color: var(--hover-color);
+    color: var(--text-color);
 }
 
 a:hover {
