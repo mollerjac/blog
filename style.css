@@ -77,15 +77,15 @@ main {
 
 
 article {
-    background-color: #fff; /* Hvid baggrund for artikler */
-    padding: 1rem; /* Indvendig polstring på 1 rem */
-    margin-top: 0; /* Ingen afstand fra header */
-    margin-bottom: 0; /* Ingen afstand fra footer */
-    border-radius: 5px; /* Afrundede hjørner med en radius på 5px */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Skaber en skyggeeffekt omkring elementet */
-    width: 100%; /* Fylder hele bredden af main */
-    box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde og højde */
-    min-height: 100vh; /* Fylder hele højden af viewporten */
+    background-color: #fff; /* Hvid baggrund for artikler */
+    padding: 1rem;
+    margin-top: 60px; /* Space from fixed header */
+    margin-bottom: 60px; /* Space from fixed footer */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Fylder hele bredden af main */
+    box-sizing: border-box;
+    min-height: calc(100vh - 120px); /* Fylder hele højden minus header og footer */
 }
 
 
