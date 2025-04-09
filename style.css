@@ -78,7 +78,7 @@ main {
 
 
 article {
-    background-color: #fff; /* Hvid baggrund for artikler */
+    background-color: var(--background-color); /* Hvid baggrund for artikler */
     padding: 1rem; /* Indvendig polstring på 1 rem */
     margin-top: 60px; /* Afstand fra fast header */
     margin-bottom: 60px; /* Afstand fra fast footer */
