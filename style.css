@@ -14,6 +14,9 @@ body {
     background-color: var(--background-color);
     padding-top: 60px; /* Space for fixed header */
     padding-bottom: 60px; /* Space for fixed footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -66,14 +69,113 @@ nav ul li a:hover {
 
 main {
     padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    flex: 1; /* Ensures main content takes available space */
 }
 
 article {
-    background-color: var(--text-color);
+    background-color: #fff; /* Hvid baggrund for artikler */
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 60px; /* Space from fixed header */
+    margin-bottom: 60px; /* Space from fixed footer */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 60px; /* Space from fixed header */
-    margin-bottom: 60px; /* Space
-
+    width: 100%; /* Fylder hele bredden af main */
+    box-sizing: border-box;
+    min-height: calc(100vh - 120px); /* Fylder hele højden minus header og footer */
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    header, footer {
+        text-align: center;
+        font-size: 0.9em; /* Mindre skriftstørrelse på små skærme */
+        padding: 1rem 0.5rem; /* Mindre padding på små skærme */
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures container takes full height of the viewport */
+}
+
+.container > main {
+    flex: 1; /* Ensures main content takes available space */
+}
+
+/* Links */
+a {
+    text-decoration: none; /* Fjerner understregningen */
+    color: var(--hover-color); /* Ændrer farven til den primære farve primary-color*/
+}
+
+a:hover {
+    color: var(--hover-color); /* Ændrer farven ved hover */
+}
+
+/* Tablets (iPads) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Smartphones (iPhones) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
