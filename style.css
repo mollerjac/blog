@@ -12,6 +12,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+    padding-top: 60px; /* Space for fixed header */
+    padding-bottom: 60px; /* Space for fixed footer */
 }
 
 header {
@@ -19,8 +21,12 @@ header {
     color: var(--text-color);
     padding: 1rem;
     text-align: center;
-    width: 100%; /* Ensures header has the same width as footer */
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 footer {
@@ -29,8 +35,11 @@ footer {
     padding: 1rem;
     text-align: center;
     width: 100%;
-    margin-top: auto; /* Ensures footer sticks to the bottom */
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -94,7 +103,20 @@ article {
     }
 }
 
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures container takes full height of the viewport */
+}
 
+.container > main {
+    flex: 1; /* Ensures main content takes available space */
+}
 
 /* Links */
 a {
