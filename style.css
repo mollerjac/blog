@@ -4,6 +4,7 @@
     --hover-color: #555;
     --background-color: #f4f4f4;
     --text-color: #fff;
+    --article-coler: #ffff;
     --font-family: 'Roboto', sans-serif; /* Opdateret til Roboto */
 }
 
@@ -78,7 +79,7 @@ main {
 
 
 article {
-    background-color: var(--background-color); /* Hvid baggrund for artikler */
+    article-coler: var(--article-coler); /* Hvid baggrund for artikler */
     padding: 1rem; /* Indvendig polstring på 1 rem */
     margin-top: 60px; /* Afstand fra fast header */
     margin-bottom: 60px; /* Afstand fra fast footer */
