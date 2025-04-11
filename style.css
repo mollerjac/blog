@@ -79,7 +79,7 @@ main {
 
 
 article {
-    article-coler: var(--article-coler); /* Hvid baggrund for artikler */
+    background-color: var(--article-coler); /* Hvid baggrund for artikler */
     padding: 1rem; /* Indvendig polstring på 1 rem */
     margin-top: 60px; /* Afstand fra fast header */
     margin-bottom: 60px; /* Afstand fra fast footer */
