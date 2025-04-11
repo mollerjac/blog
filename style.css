@@ -4,7 +4,7 @@
     --hover-color: #555;
     --background-color: #f4f4f4;
     --text-color: #fff;
-    --article-coler: #ffff;
+    --article-color: #222; /* Tilføjet en mørkere farve til blogindlæg */
     --font-family: 'Roboto', sans-serif; /* Opdateret til Roboto */
 }
 
@@ -76,110 +76,13 @@ main {
     flex: 1; /* Ensures main content takes available space */
 }
 
-
-
 article {
-    background-color: var(--text-color); /* Hvid baggrund for artikler */
-    padding: 1rem; /* Indvendig polstring på 1 rem */
-    margin-top: 60px; /* Afstand fra fast header */
-    margin-bottom: 60px; /* Afstand fra fast footer */
-    border-radius: 5px; /* Afrundede hjørner med en radius på 5px */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Skaber en skyggeeffekt omkring elementet */
-    width: 100%; /* Fylder hele bredden af main */
-    box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde og højde */
-}
-
-
-
-@media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 0.5rem 0;
-    }
-
-    main {
-        padding: 1rem;
-    }
-
-    header, footer {
-        text-align: center;
-        font-size: 0.9em; /* Mindre skriftstørrelse på små skærme */
-        padding: 1rem 0.5rem; /* Mindre padding på små skærme */
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin-bottom: 0.5rem;
-    }
-}
-
-.container {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures container takes full height of the viewport */
-}
-
-.container > main {
-    flex: 1; /* Ensures main content takes available space */
-}
-
-/* Links */
-a {
-    text-decoration: none; /* Fjerner understregningen */
-    color: var(--hover-color); /* Ændrer farven til den primære farve primary-color*/
-}
-
-a:hover {
-    color: var(--hover-color); /* Ændrer farven ved hover */
-}
-
-/* Tablets (iPads) */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    header nav ul li {
-        margin-bottom: 10px;
-    }
-}
-
-/* Smartphones (iPhones) */
-@media (max-width: 480px) {
-    .container {
-        width: 95%;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin-bottom: 5px;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
+    background-color: var(--article-color); /* Mørkere baggrundsfarve */
+    color: var(--text-color); /* Lys tekst for kontrast */
+    padding: 1.5rem; /* Indvendig polstring */
+    margin-top: 20px; /* Afstand mellem blogindlæg */
+    border-radius: 8px; /* Afrundede hjørner */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Skyggeeffekt for dybde */
+    width: 100%; /* Fylder hele bredden af main */
+    box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde og højde */
 }
