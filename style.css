@@ -3,7 +3,7 @@
     --secondary-color: #444; /* Mørkere grå */
     --hover-color: #555; /* Mellemgrå */
     --background-color: #f4f4f4; /* Lys grå (næsten hvid) */
-    --text-color: #fff; /* Hvid */
+    --text-color: #333; /* Hvid */
     --article-coler: #fff; /* Hvid */
     --font-family: 'Roboto', sans-serif; /* Opdateret til Roboto */
 }
