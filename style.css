@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #333;
-    --secondary-color: #444;
-    --hover-color: #555;
-    --background-color: #f4f4f4;
-    --text-color: #fff;
-    --article-coler: #fff;
+    --primary-color: #333; /* Mørk grå */
+    --secondary-color: #444; /* Mørkere grå */
+    --hover-color: #555; /* Mellemgrå */
+    --background-color: #f4f4f4; /* Lys grå (næsten hvid) */
+    --text-color: #fff; /* Hvid */
+    --article-coler: #fff; /* Hvid */
     --font-family: 'Roboto', sans-serif; /* Opdateret til Roboto */
 }
 
@@ -57,7 +57,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--text-color);
+    color: var(--background-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
     background-color: var(--secondary-color);
