@@ -21,7 +21,6 @@ body {
 }
 
 header {
-    margin-bottom: 1rem;
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: 1rem;
@@ -70,6 +69,7 @@ nav ul li a:hover {
 }
 
 main {
+    margin-top: 1rem;
     padding: 2rem;
     width: 100%;
     max-width: 800px;
