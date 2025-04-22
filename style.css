@@ -22,7 +22,7 @@ body {
 
 header {
     background-color: var(--text-color);
-    color: var(--article-coler);
+    color: var(#fff);
     padding: 1rem;
     text-align: center;
     width: 100%;
