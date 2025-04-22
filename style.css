@@ -1,7 +1,7 @@
 :root {
     --primary-color: #333; /* Mørk grå */
     --secondary-color: #444; /* Mørkere grå */
-    --hover-color: #f4f4f4; /* Lys grå (næsten hvid) */
+    --hover-color: #444; /* Lys grå (næsten hvid) */
     --background-color: #f4f4f4; /* Lys grå (næsten hvid) */
     --text-color: #333; /* Mørk grå */
     --article-color: #fff; /* Hvid */
