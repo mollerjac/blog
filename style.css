@@ -1,10 +1,10 @@
 :root {
     --primary-color: #333; /* Mørk grå */
     --secondary-color: #444; /* Mørkere grå */
-    --hover-color: #f4f4f4; /* Mellemgrå */
+    --hover-color: #f4f4f4; /* Lys grå (næsten hvid) */
     --background-color: #f4f4f4; /* Lys grå (næsten hvid) */
-    --text-color: #333; /* Hvid */
-    --article-coler: #fff; /* Hvid */
+    --text-color: #333; /* Mørk grå */
+    --article-color: #fff; /* Hvid */
     --font-family: 'Roboto', sans-serif; /* Opdateret til Roboto */
 }
 
