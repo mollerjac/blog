@@ -88,6 +88,13 @@ article {
     box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde og højde */
 }
 
+article img {
+  max-width: 100%; /* Billedet vil aldrig blive større end sin container */
+  height: auto;    /* Bevarer billedets proportioner */
+  display: block;  /* Fjerner ekstra mellemrum under billedet */
+  margin: 0 auto;  /* Centrerer billedet, hvis det er mindre end containeren */
+}
+
 
 
 @media (max-width: 600px) {
