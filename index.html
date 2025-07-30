@@ -6,15 +6,6 @@
     <title>Min Blog</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-                
-        <div id="funfact"></div>
-        <script src="funfact.js"></script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            const fact = getFunFact();
-            document.getElementById("funfact").textContent = fact;
-          });
-        </script>
 </head>
 <body>
     <div class="container">
@@ -60,6 +51,14 @@
             </article>
 
             <article>
+                <script src="funfact.js"></script>
+                        <script>
+                          document.addEventListener("DOMContentLoaded", function() {
+                            const fact = getFunFact();
+                            document.getElementById("funfact").textContent = fact;
+                          });
+                </script>
+                
                 <p>Fun Fact 🤓</p>
                 <div id="funfact"></div>
                 <p></p>
