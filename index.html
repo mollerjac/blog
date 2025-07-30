@@ -6,6 +6,14 @@
     <title>Min Blog</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
+                
+    <script src="funfact.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const fact = getFunFact();
+        document.getElementById("funfact").textContent = fact;
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -51,10 +59,8 @@
             </article>
 
             <article>
-                <section class="funfact">
-                    <h3>Dagens Fun Fact 🤓</h3>
-                    <p>{{ funfact }}</p>
-                </section>
+                <p>Dagens Fun Fact 🤓</p>
+                <div id="funfact"></div>
             </article>
             
         </main>
