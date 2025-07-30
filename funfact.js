@@ -1,9 +1,4 @@
-from flask import Flask, render_template
-import random
-
-app = Flask(__name__)
-
-fun_facts = [
+const facts = [
     "Blæksprutter har tre hjerter.",
     "Bananer er bær, men jordbær er det ikke.",
     "Python er opkaldt efter Monty Python – ikke slangen!",
@@ -438,12 +433,8 @@ fun_facts = [
     "Kvækfroer kan ikke lukke øjnene - de har ingen øjenlåg.",
     "En blåhval kan spytte vand 9 meter op i luften.",
     "Hajer kan lugte en dråbe blod i 100 liter vand."
-]
+];
 
-@app.route('/')
-def show_funfact():
-    fact = random.choice(fun_facts)
-    return render_template('index.html', funfact=fact)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+function getFunFact() {
+  return facts[Math.floor(Math.random() * facts.length)];
+}
