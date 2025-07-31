@@ -173,8 +173,11 @@ a:hover {
 
     h1 {
         font-size: 1.5em;
-         coler: #2d8604;
+        --color: #2d8604;
+        color: var(--color);
     }
+
+
 
     h2 {
         font-size: 1.2em;
