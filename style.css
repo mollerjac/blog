@@ -85,7 +85,7 @@ article {
     background-color: var(--article-color); /* Mørkere baggrundsfarve */
     color: var(--text-color); /* Lys tekst for kontrast */
     padding: 1.5rem; /* Indvendig polstring */
-    margin-top: 30px; /* Afstand mellem blogindlæg */
+    margin-top: 40px; /* Afstand mellem blogindlæg */
     border-radius: 8px; /* Afrundede hjørner */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Skyggeeffekt for dybde */
     width: 100%; /* Fylder hele bredden af main */
