@@ -179,7 +179,7 @@ a:hover {
         font-size: 1.2em;
     }
 
-    .background {
+    background {
     background-color: #2d8604 !important; /* Baggrundsfarve */
     padding: 20px;             /* Indvendig afstand */
     text-align: center;        /* Centrerer indholdet */
