@@ -128,9 +128,6 @@ article img {
     }
 }
 
-.container > main {
-    flex: 1; /* Ensures main content takes available space */
-}
 
 /* Links */
 a {
