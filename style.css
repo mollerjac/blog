@@ -179,9 +179,9 @@ a:hover {
         font-size: 1.2em;
     }
 
-    background {
-    background-color: #2d8604 !important; /* Baggrundsfarve */
-    padding: 20px;             /* Indvendig afstand */
-    text-align: center;        /* Centrerer indholdet */
-    border-radius: 10px;       /* Runde hjørner */
+    .background {
+      background-color: #2d8604 !important;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
     }
