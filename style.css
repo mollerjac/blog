@@ -100,89 +100,10 @@ article img {
   margin: 0 auto;  /* Centrerer billedet, hvis det er mindre end containeren */
 }
 
-
-
-
-
-/* === Base Styles (Desktop First) === */
-a {
-    text-decoration: none;
-    color: var(--primary-color); /* Primær farve */
-}
-
-a:hover {
-    color: var(--hover-color); /* Farve ved hover */
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0;
-}
-
-main {
-    padding: 2rem;
-}
-
-header, footer {
-    text-align: left;
-    font-size: 1em;
-    padding: 2rem;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-h1 {
-    font-size: clamp(2em, 4vw, 3em);
-}
-
-h2 {
-    font-size: clamp(1.5em, 3vw, 2.5em);
-}
-
-/* === Tablets (max-width: 768px) === */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+@media (max-width: 600px) {
     nav ul li {
         display: block;
-        margin-bottom: 10px;
-    }
-
-    header, footer {
-        text-align: center;
-        font-size: 0.95em;
-        padding: 1.5rem;
-    }
-}
-
-/* === Smartphones (max-width: 480px) === */
-@media (max-width: 480px) {
-    .container {
-        width: 95%;
-    }
-
-    header nav ul {
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 5px;
+        margin: 0.5rem 0;
     }
 
     main {
@@ -190,22 +111,69 @@ h2 {
     }
 
     header, footer {
-        font-size: 0.9em;
-        padding: 1rem 0.5rem;
+        text-align: center;
+        font-size: 0.9em; /* Mindre skriftstørrelse på små skærme */
+        padding: 1rem 0.5rem; /* Mindre padding på små skærme */
     }
 
-    h1 {
-        font-size: clamp(1.5em, 5vw, 2em);
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    h2 {
-        font-size: clamp(1.2em, 4vw, 1.8em);
+    header nav ul li {
+        margin-bottom: 0.5rem;
     }
 }
 
-    .background {
-      background-color: #2d8604;
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
+
+/* Links */
+a {
+    text-decoration: none; /* Fjerner understregningen */
+    color: var(--hover-color); /* Ændrer farven til den primære farve primary-color*/
+}
+
+a:hover {
+    color: var(--hover-color); /* Ændrer farven ved hover */
+}
+
+/* Tablets (iPads) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Smartphones (iPhones) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
     }
