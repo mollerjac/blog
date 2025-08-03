@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Velkommen til min blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Forside</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/om-mig">Om mig</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <p><time datetime="2025-03-4">4 Marts 2025</time></p>
+                <h2>CCNA Introduction to Networks</h2>
+                    <p>
+                      Jeg har gennemført CCNA Introduction to Networks kurset, som er det første trin i Cisco's certificeringsprogram for netværksprofessionelle. Kurset gav mig en grundlæggende forståelse af netværksteknologier og -principper. Her er nogle af de vigtigste emner kurset dækkede:
+                    </p>
+                    <p>
+                      Netværksgrundlag: Man starter med de grundlæggende netværksbegreber, herunder netværksmodeller, protokoller og arkitekturer.
+                      OSI-modellen: Derefter gennemgik man de syv lag i OSI-modellen og deres funktioner.
+                      Netværksudstyr: Jeg lærte om forskellige typer netværksudstyr som routere, switche og access points.
+                      IP-adressering: Man dykker ned i grundlæggende IP-adressering og subnetting.
+                      Netværkssikkerhed: Der var også en introduktion til netværkssikkerhed og bedste praksis for at beskytte netværk.
+                    </p>
+                    <p>
+                      Kurset er designet til at give de nødvendige færdigheder til at konfigurere, administrere og fejlfinde netværk i små til mellemstore virksomheder. Det har været en vigtig byggesten for mig til at forstå netværksteknologi.
+                    </p>
+  
+            
+            </article>
+            <article>
+                <img src="https://github.com/mollerjac/blog/raw/main/img/CCNAITN.jpg" alt="Beviset">
+            </article>
+        </main>
+        <footer>
+            <p>&copy; 2025 Min Blog</p>
+        </footer>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
