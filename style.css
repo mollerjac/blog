@@ -102,10 +102,87 @@ article img {
 
 
 
-@media (max-width: 600px) {
+
+
+/* === Base Styles (Desktop First) === */
+a {
+    text-decoration: none;
+    color: var(--primary-color); /* Primær farve */
+}
+
+a:hover {
+    color: var(--hover-color); /* Farve ved hover */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+header, footer {
+    text-align: left;
+    font-size: 1em;
+    padding: 2rem;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: clamp(2em, 4vw, 3em);
+}
+
+h2 {
+    font-size: clamp(1.5em, 3vw, 2.5em);
+}
+
+/* === Tablets (max-width: 768px) === */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     nav ul li {
         display: block;
-        margin: 0.5rem 0;
+        margin-bottom: 10px;
+    }
+
+    header, footer {
+        text-align: center;
+        font-size: 0.95em;
+        padding: 1.5rem;
+    }
+}
+
+/* === Smartphones (max-width: 480px) === */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header nav ul {
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 5px;
     }
 
     main {
@@ -113,72 +190,18 @@ article img {
     }
 
     header, footer {
-        text-align: center;
-        font-size: 0.9em; /* Mindre skriftstørrelse på små skærme */
-        padding: 1rem 0.5rem; /* Mindre padding på små skærme */
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin-bottom: 0.5rem;
-    }
-}
-
-
-/* Links */
-a {
-    text-decoration: none; /* Fjerner understregningen */
-    color: var(--hover-color); /* Ændrer farven til den primære farve primary-color*/
-}
-
-a:hover {
-    color: var(--hover-color); /* Ændrer farven ved hover */
-}
-
-/* Tablets (iPads) */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    header nav ul li {
-        margin-bottom: 10px;
-    }
-}
-
-/* Smartphones (iPhones) */
-@media (max-width: 480px) {
-    .container {
-        width: 95%;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin-bottom: 5px;
+        font-size: 0.9em;
+        padding: 1rem 0.5rem;
     }
 
     h1 {
-        font-size: 1.5em;
+        font-size: clamp(1.5em, 5vw, 2em);
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: clamp(1.2em, 4vw, 1.8em);
     }
+}
 
     .background {
       background-color: #2d8604;
