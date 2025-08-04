@@ -50,8 +50,11 @@
                 </p>
             </article>
             <article>
-                <script>
+                    <div id="tekstContainer"></div>
+                    
+                    <script>
                       const tekster = [
+
                             "En ko kan løbe op til 40 km/t – hurtigere end du tror!",
                               "En snegl kan sove i op til 3 år uden at vågne.",
                               "En blåhval har et hjerte på størrelse med en lille bil.",
@@ -98,25 +101,25 @@
                               "Nintendo startede som et kortspilfirma i 1889.",
                               "Der findes en version af Tetris, der kan spilles på et oscilloskop.",
                               "Minecraft er skrevet i Java, og har solgt over 300 millioner kopier."
-                      ];
-                    
-                      function visTilfældigTekst() {
-                        const randomIndex = Math.floor(Math.random() * tekster.length);
-                        document.getElementById("tekstContainer").textContent = tekster[randomIndex];
-                      }
-                    
-                      // Kør når siden bliver synlig igen
-                      document.addEventListener("visibilitychange", function() {
-                        if (document.visibilityState === "visible") {
-                          visTilfældigTekst();
-                        }
-                      });
-                    
-                      // Kør første gang siden indlæses
-                      window.onload = visTilfældigTekst;
-                    </script>
-                    
-                    <div id="tekstContainer"></div>
+                                ];
+                                
+                                  function visTilfældigTekst() {
+                                    const randomIndex = Math.floor(Math.random() * tekster.length);
+                                    document.getElementById("tekstContainer").textContent = tekster[randomIndex];
+                                  }
+                                
+                                  // Kør første gang siden indlæses
+                                  window.addEventListener("load", visTilfældigTekst);
+                                
+                                  // Kør når brugeren kommer tilbage via browserhistorik
+                                  window.addEventListener("pageshow", function(event) {
+                                    if (event.persisted || performance.navigation.type === 2) {
+                                      // Siden blev hentet fra cache (back/forward navigation)
+                                      visTilfældigTekst();
+                                    }
+                                  });
+                        </script>
+
 
             </article>
 
