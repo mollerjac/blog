@@ -49,7 +49,34 @@
                    
                 </p>
             </article>
+            <article>
+                <script>
+                      const tekster = [
+                        "Velkommen tilbage!",
+                        "Her er en ny fun fact!",
+                        "Du fandt vej igen – flot!",
+                        "Hver gang du kommer her, sker der noget nyt!"
+                      ];
+                    
+                      function visTilfældigTekst() {
+                        const randomIndex = Math.floor(Math.random() * tekster.length);
+                        document.getElementById("tekstContainer").textContent = tekster[randomIndex];
+                      }
+                    
+                      // Kør når siden bliver synlig igen
+                      document.addEventListener("visibilitychange", function() {
+                        if (document.visibilityState === "visible") {
+                          visTilfældigTekst();
+                        }
+                      });
+                    
+                      // Kør første gang siden indlæses
+                      window.onload = visTilfældigTekst;
+                    </script>
+                    
+                    <div id="tekstContainer"></div>
 
+            </article>
 
             
         </main>
