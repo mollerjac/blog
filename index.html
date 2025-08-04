@@ -50,8 +50,11 @@
                 </p>
             </article>
             <article>
-                    <div id="tekstContainer"></div>
 
+
+                        <h2>Fun facts</h2>
+                        <div id="tekstContainer"></div>
+                        
                         <script>
                           const funFacts = [
                             "En ko kan løbe op til 40 km/t – hurtigere end du tror!",
@@ -59,14 +62,10 @@
                             "En blåhval har et hjerte på størrelse med en lille bil.",
                             "Giraffer har sort tunge, og den kan blive op til 50 cm lang.",
                             "En kolibri kan slå med vingerne op til 80 gange i sekundet.",
-                            "En haj kan lugte blod i vandet på over 1 km afstand.",
                             "Træer kommunikerer med hinanden via svampe-netværk under jorden – kaldet 'Wood Wide Web'.",
                             "Et døgn på Venus er længere end et år på Venus.",
-                            "Der er flere stjerner i universet end sandkorn på alle Jordens strande.",
-                            "Astronauter bliver 2-5 cm højere i rummet pga. manglende tyngdekraft.",
                             "Honning bliver aldrig dårligt – man har fundet spiselig honning i egyptiske grave.",
                             "Ketchup blev oprindeligt brugt som medicin i 1800-tallet.",
-                            "En banan er faktisk et bær, mens en jordbær ikke er det.",
                             "Popcorn kan springe op til 1 meter i luften.",
                             "Den første bug i en computer var en møl, der sad fast i et relæ.",
                             "Doom fra 1993 kan spilles på alt – fra printere til køleskabe!",
@@ -75,19 +74,21 @@
                           ];
                         
                           function visTilfældigFunFact() {
-                            const randomIndex = Math.floor(Math.random() * funFacts.length);
-                            document.getElementById("tekstContainer").textContent = funFacts[randomIndex];
+                            const container = document.getElementById("tekstContainer");
+                            if (container) {
+                              const randomIndex = Math.floor(Math.random() * funFacts.length);
+                              container.textContent = funFacts[randomIndex];
+                            } else {
+                              console.warn("Elementet #tekstContainer blev ikke fundet.");
+                            }
                           }
                         
-                          // Kør ved første indlæsning
-                          window.addEventListener("load", visTilfældigFunFact);
+                          // Vent til DOM er klar
+                          document.addEventListener("DOMContentLoaded", visTilfældigFunFact);
                         
                           // Kør når siden vises igen (f.eks. ved tilbage-knap)
-                          window.addEventListener("pageshow", function(event) {
-                            visTilfældigFunFact();
-                          });
+                          window.addEventListener("pageshow", visTilfældigFunFact);
                         </script>
-
 
             </article>
 
