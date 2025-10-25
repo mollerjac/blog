@@ -49,49 +49,7 @@
                    
                 </p>
             </article>
-            <article>
-
-
-                        <h2>Fun facts</h2>
-                        <div id="tekstContainer"></div>
-                        
-                        <script>
-                          const funFacts = [
-                            "En ko kan løbe op til 40 km/t – hurtigere end du tror!",
-                            "En snegl kan sove i op til 3 år uden at vågne.",
-                            "En blåhval har et hjerte på størrelse med en lille bil.",
-                            "Giraffer har sort tunge, og den kan blive op til 50 cm lang.",
-                            "En kolibri kan slå med vingerne op til 80 gange i sekundet.",
-                            "Træer kommunikerer med hinanden via svampe-netværk under jorden – kaldet 'Wood Wide Web'.",
-                            "Et døgn på Venus er længere end et år på Venus.",
-                            "Honning bliver aldrig dårligt – man har fundet spiselig honning i egyptiske grave.",
-                            "Ketchup blev oprindeligt brugt som medicin i 1800-tallet.",
-                            "Popcorn kan springe op til 1 meter i luften.",
-                            "Den første bug i en computer var en møl, der sad fast i et relæ.",
-                            "Doom fra 1993 kan spilles på alt – fra printere til køleskabe!",
-                            "Nintendo startede som et kortspilfirma i 1889.",
-                            "Minecraft er skrevet i Java, og har solgt over 300 millioner kopier."
-                          ];
-                        
-                          function visTilfældigFunFact() {
-                            const container = document.getElementById("tekstContainer");
-                            if (container) {
-                              const randomIndex = Math.floor(Math.random() * funFacts.length);
-                              container.textContent = funFacts[randomIndex];
-                            } else {
-                              console.warn("Elementet #tekstContainer blev ikke fundet.");
-                            }
-                          }
-                        
-                          // Vent til DOM er klar
-                          document.addEventListener("DOMContentLoaded", visTilfældigFunFact);
-                        
-                          // Kør når siden vises igen (f.eks. ved tilbage-knap)
-                          window.addEventListener("pageshow", visTilfældigFunFact);
-                        </script>
-
-            </article>
-
+           
             
         </main>
         <footer>
